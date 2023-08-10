@@ -1,0 +1,258 @@
+:root {
+	--rojo: #093ce5;
+	--fondo: #141414;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--fondo);
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor {
+	width: 90%;
+	margin: auto;
+}
+
+header {
+	padding: 30px 0;
+}
+
+header .contenedor {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logotipo {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: normal;
+	color: var(--rojo);
+	font-size: 40px;
+}
+
+header nav a {
+	color: #AAA;
+	text-decoration: none;
+	margin-right: 8px;
+}
+
+header nav a:hover,
+header nav a.activo {
+	color: #FFF;
+}
+
+/* ---- ----- ----- Producto Principal ----- ----- ----- */
+.Producto-principal {
+	font-size: 16px;
+	min-height: 40.62em;
+	color: #fff;
+	background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, 0.5) 100%), url(../img/principal.jpg);
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: end;
+}
+
+.Producto-principal .contenedor {
+	margin: 0 auto;
+	margin-bottom: 6.25em;
+}
+
+.Producto-principal .titulo {
+	font-weight: 600;
+	font-size: 3.12em;
+	margin-bottom: 0.4em;
+}
+
+.Producto-principal .descripcion {
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.75em;
+	max-width: 50%;
+	margin-bottom: 1.25em;
+}
+
+.Producto-principal .boton {
+	background: rgba(0,0,0, 0.5);
+	border: none;
+	border-radius: 0.31em;
+	padding: 0.93em 1.87em;
+	color: #fff;
+	margin-right: 1.25em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1.12em;
+}
+
+.Producto-principal .boton:hover {
+	background: #1f0875;
+	color: #d41414;
+}
+
+.Producto-principal .boton i {
+	margin-right: 1.25em;
+}
+
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+.contenedor-titulo-controles {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.contenedor-titulo-controles h3 {
+	color: #fff;
+	font-size: 30px;
+}
+
+.contenedor-titulo-controles .indicadores button {
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo {
+	background: rgb(15, 204, 8);
+}
+
+
+/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+.Productos-Recomendados {
+	margin-bottom: 70px;
+}
+
+.Productos-Recomendados .contenedor-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.Productos-Recomendados .contenedor-principal .flecha-izquierda,
+.Productos-Recomendados .contenedor-principal .flecha-derecha {
+	position: absolute;
+	border: none;
+	background: rgba(172, 10, 37, 0.3);
+	font-size: 40px;
+	height: 30%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #0ab6c2;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+    margin-top: 50px;
+}
+
+.Productos-Recomendados .contenedor-principal .flecha-izquierda:hover,
+.Productos-Recomendados .contenedor-principal .flecha-derecha:hover {
+	background: rgba(0,0,0, .9);
+    
+}
+
+.Productos-Recomendados .contenedor-principal .flecha-izquierda {
+	left: 0;
+}
+
+.Productos-Recomendados .contenedor-principal .flecha-derecha {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.Productos-Recomendados .contenedor-carousel {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.Productos-Recomendados .contenedor-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.Productos-Recomendados .contenedor-carousel .carousel .Producto {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.Productos-Recomendados .contenedor-carousel .carousel .Producto.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.Productos-Recomendados .contenedor-carousel .carousel .Producto img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 800px) {
+	header .logotipo {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.Producto-principal {
+		font-size: 14px;
+	}
+
+	.Producto-principal .descripcion {
+		max-width: 100%;
+	}
+
+	.Productos-Recomendados .contenedor-carousel {
+		overflow: visible;
+	}
+
+	.Productos-Recomendados .contenedor-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.Productos-Recomendados .indicadores,
+	.Productos-Recomendados .flecha-izquierda,
+	.Productos-Recomendados .flecha-derecha {
+		display: none;
+	}
+
+	 /* Estilos para el fondo oscurecido */
+	 .overlay {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(179, 173, 170, 0.5);
+		align-items: center;
+		justify-content: center;
+	  }
+	/* Estilos para el modal */
+	.modal {
+		display: none;
+		background-color: rgba(230, 202, 210, 0.55);
+		padding: 20px;
+		border-radius: 5px;
+		box-shadow: 0px 0px 10px rgba(150, 192, 125, 0.5);
+		 
+	}	
+}

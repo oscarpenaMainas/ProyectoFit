@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FitShop</title>
+	<link rel="shortcut icon" href="img/icono.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <div class="contenedor">
+
+            <h2 class="logotipo">FitShop</h2>
+        <nav>
+			<button id="openModalBtn">Ingresar Usuario</button>
+			<div class="overlay" id="overlay">
+				<div class="modal" id="modal">
+				  <h2>Ingresar Usuario</h2>
+				  <form>
+					<label for="username">Nombre de usuario:</label>
+					<input type="text" id="username" name="username" required>
+					<br>
+					<label for="password">Contraseña:</label>
+					<input type="password" id="password" name="password" required>
+					<br>
+					<button type="submit">Ingresar</button>
+				  </form>
+				  <button id="closeModalBtn">Cerrar</button>
+				</div>
+			  </div>
+			
+            <a href="#" class="activo">Inicio</a>
+            <a href="#">Programas</a>
+            <a href="#">Productos</a>
+            <a href="#">Más Recientes</a>
+            <a href="#">Mi lista</a>
+        </nav>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="Producto-principal">
+            <div class="contenedor">
+                <h3 class="titulo">Producto Favoritos</h3>
+                <p class="descripcion">"¡Hey campeón/a! Hoy te reto a levantarte, calzarte esas zapatillas y salir a conquistar el mundo con tu pasión por el deporte. ¿Sabes qué? Eres increíblemente poderoso/a, y cada vez que te mueves, estás demostrando al mundo de lo que eres capaz.</p>
+                <button role="button" class="boton"><i class="fa fa-info-circle"></i> Producto Del Dia</button>
+            </div>
+        </div>
+
+        <div class="Producto-recomendados contenedor">
+            <div class="contenedor-titulo-controles">
+                <h3>Productos Recomendados</h3>
+                <div class="indicadores"></div>
+            </div>
+
+            <div class="contenedor-principal.jnp">
+				<button role="button" id="flecha-izquierda" class="flecha-izquierda"><i class="fas fa-angle-left"></i></button>
+
+				<div class="contenedor-carousel">
+					<div class="carousel">
+						<div class="Producto">
+							 <a href="https://sportfitness.co/products/bicicleta-spinning-urbino?varian" title="Detalles">"Detalles"
+								<img src="img/1.jfif" alt="">
+						</div>
+						<div class="Producto">
+							<a href="#"><img src="img/2.jfif" alt=""></a>
+						</div>
+						<div class="Producto">
+							<a href="#"><img src="img/3.jfif" alt=""></a>
+						</div>
+						<div class="Producto">
+							<a href="#"><img src="img/4.jfif" alt=""></a>
+						</div>
+						<div class="Producto">
+							<a href="#"><img src="img/5.jfif" alt=""></a>
+						</div>
+						<div class="Producto">
+							<a href="#"><img src="img/6.jfif" alt=""></a>
+						</div>
+						<div class="Producto">
+							<a href="#"><img src="img/7.jfif" alt=""></a>
+						</div>
+						<div class="Producto">
+							<a href="#"><img src="img/8.jfif" alt=""></a>
+						</div>
+						<div class="Producto">
+							<a href="#"><img src="img/9.jfif" alt=""></a>
+						</div>
+						<div class="Producto">
+							<a href="#"><img src="img/10.jfif" alt=""></a>
+						</div>
+						<div class="Producto">
+							<a href="#"><img src="img/11.jfif" alt=""></a>
+						</div>
+						<div class="Producto">
+							<a href="#"><img src="img/12.jfif" alt=""></a>
+						</div>
+						<div class="Producto">
+							<a href="#"><img src="img/13.jfif" alt=""></a>
+						</div>
+						<div class="Producto">
+							<a href="#"><img src="img/14.jfif" alt=""></a>
+						</div>
+						<div class="Producto">
+							<a href="#"><img src="img/15.jfif" alt=""></a>
+						</div>
+						<div class="Producto">
+							<a href="#"><img src="img/16.jfif" alt=""></a>
+						</div>
+						<div class="Producto">
+							<a href="#"><img src="img/17.jfif" alt=""></a>
+						</div>
+						<div class="Producto">
+							<a href="#"><img src="img/18.jfif" alt=""></a>
+						</div>
+						<div class="Producto">
+							<a href="#"><img src="img/19.jfif" alt=""></a>
+						</div>
+						
+					</div>
+				</div>
+
+				<button role="button" id="flecha-derecha" class="flecha-derecha"><i class="fas fa-angle-right"></i></button>
+			</div>
+		</div>
+	</main>
+
+    <script src="js/main.js" defer></script>
+	<script>
+		const openModalBtn = document.getElementById("openModalBtn");
+		const closeModalBtn = document.getElementById("closeModalBtn");
+		const overlay = document.getElementById("overlay");
+		const modal = document.getElementById("modal");
+	  
+		openModalBtn.addEventListener("click", () => {
+		  overlay.style.display = "block";
+		  modal.style.display = "block";
+		});
+	  
+		closeModalBtn.addEventListener("click", () => {
+		  overlay.style.display = "none";
+		  modal.style.display = "none";
+		});
+	  </script>
+</body>
+</html>
